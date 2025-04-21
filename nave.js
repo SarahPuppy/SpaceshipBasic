@@ -83,19 +83,19 @@ let pesoNave = massaNave * g;
 
 console.clear();
 console.log("Vamos ver se voa!");
-await delay(4000); 
+await delay(3000); 
 console.clear();
 console.log("Fazendo testes...");
 
-await delay(4000); 
+await delay(3000); 
 console.clear();
 console.log("Construindo foguete...");
 
-await delay(4000);
+await delay(3000);
 console.clear();
 console.log("Preparando voo...");
 
-await delay(3000);
+await delay(2000);
 console.clear();
 
 if (motorEscolhido.empuxo > pesoNave){
