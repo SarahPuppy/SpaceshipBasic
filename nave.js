@@ -23,10 +23,10 @@ const rl = readline.createInterface({ input, output });
 //função para o empuxe ser selecionavel 
 async function selecionarMotor() {
   const motores = {
-    1: { nome: "Motor Pequeno", empuxo: 50000 },
-    2: { nome: "Motor Médio", empuxo: 100000 },
-    3: { nome: "Motor Grande", empuxo: 200000 },
-    4: { nome: "Motor Enorme", empuxo: 500000 }
+    1: { nome: "Motor Pequeno", empuxo: 100000 },
+    2: { nome: "Motor Médio", empuxo: 200000 },
+    3: { nome: "Motor Grande", empuxo: 500000 },
+    4: { nome: "Motor Enorme", empuxo: 800000 }
   };
 
   let motorEscolhido;
@@ -34,10 +34,10 @@ async function selecionarMotor() {
   while (!motorEscolhido) {
     const resposta = await rl.question(
       "Escolha um motor:\n" +
-      "1 - Motor Pequeno (50.000 N)\n" +
-      "2 - Motor Médio (100.000 N)\n" +
-      "3 - Motor Grande(200.000 N)\n" +
-      "4 - Motor Enorme (500.000 N)\n" +
+      "1 - Motor Pequeno (100.000 N)\n" +
+      "2 - Motor Médio (200.000 N)\n" +
+      "3 - Motor Grande(500.000 N)\n" +
+      "4 - Motor Enorme (800.000 N)\n" +
       "Digite o número: "
     );
 
@@ -93,7 +93,7 @@ console.log("Para o foguete voar, a força do motor deve ser maior que o PESO da
   "o peso é a massa da nave multiplicada pela gravidade.\n" +
   "sendo assim, o peso da nave é: " + pesoNave);
 
-await delay(4000);
+await delay(5000);
 console.clear();
 console.log("Preparando voo...");
 
