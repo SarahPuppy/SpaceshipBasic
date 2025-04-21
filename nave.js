@@ -58,7 +58,7 @@ async function selecionarMotor() {
 const selecionarMassa = async () => {
   while (true) {
 
-    massaNave = await rl.question("Insira a massa da sua nave (massa é diferente de peso): " );
+    massaNave = await rl.question("Insira a massa da sua nave em kg (massa é diferente de peso): " );
     massaNave = Number(massaNave); //converte em um numero, so pra garantir 
 
     if (massaNave == 0) {
@@ -83,19 +83,21 @@ let pesoNave = massaNave * g;
 
 console.clear();
 console.log("Vamos ver se voa!");
-await delay(3000); 
+await delay(2000); 
 console.clear();
 console.log("Fazendo testes...");
 
-await delay(3000); 
+await delay(2000); 
 console.clear();
-console.log("Construindo foguete...");
+console.log("Para o foguete voar, a força do motor deve ser maior que o PESO da nave.\n" +
+  "o peso é a massa da nave multiplicada pela gravidade.\n" +
+  "sendo assim, o peso da nave é: " + pesoNave);
 
-await delay(3000);
+await delay(4000);
 console.clear();
 console.log("Preparando voo...");
 
-await delay(2000);
+await delay(3000);
 console.clear();
 
 if (motorEscolhido.empuxo > pesoNave){
